@@ -4,8 +4,9 @@
     "description": "PureGeek Website",
     "main": "index.js",
     "scripts": {
-        "build": "npm run clean && mkdir build && cp public/* build/",
-        "clean": "rm -fr build/"
+        "build": "npm run clean && npm run mkdirs && cp -r src/* build/",
+        "clean": "rm -fr build/",
+        "mkdirs": "mkdir build && mkdir build/css && mkdir build/js && mkdir build/img"
     },
     "author": "",
     "license": "ISC",

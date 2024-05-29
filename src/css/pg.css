@@ -1,0 +1,35 @@
+:root {
+    --collegeNavy: rgb(0, 34, 68);
+    --actionGreen: rgb(105, 190, 40);
+    --wolfGray: rgb(165, 172, 175);
+}
+
+body {
+    margin-left: 20%;
+    background-color: rgb(210, 213, 215);
+    font-size: 16px;
+    line-height: 18px;
+}
+
+p {
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h3 {
+    transition: opacity 3s ease;
+    opacity: 1;
+}
+
+.contact-info {
+    background-color: var(--wolfGray);
+    border-top: 4px solid var(--collegeNavy);  /* Top border */
+    border-bottom: 4px solid var(--collegeNavy);  /* Bottom border */
+    border-left: 4px solid var(--actionGreen);  /* Left border */
+    border-right: 4px solid var(--actionGreen);  /* Right border */
+    padding: 10px;
+    width: 300px;  /* Adjust width as needed */
+    height: 150px;  /* Adjust height as needed */
+    box-sizing: border-box;  /* Ensure padding is included in the width and height */
+    margin: 10px 0; /* Adjust margin */
+}
