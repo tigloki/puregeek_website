@@ -1,0 +1,13 @@
+{
+    "name": "puregeek_website",
+    "version": "0.0.1",
+    "description": "PureGeek Website",
+    "main": "index.js",
+    "scripts": {
+        "build": "npm run clean && mkdir build && cp public/* build/",
+        "clean": "rm -fr build/"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {}
+}

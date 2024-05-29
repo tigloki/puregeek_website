@@ -1,0 +1,22 @@
+# Node modules
+node_modules
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Build output
+build
+
+# Optional npm cache directory
+.npm
+
+# dotenv environment variables file
+.env
+
+# Editor directories and files
+.vscode
+.idea
+*.sublime-workspace
+
