@@ -1,14 +1,23 @@
 {
-    "name": "puregeek_website",
-    "version": "0.0.1",
-    "description": "PureGeek Website",
+    "name": "puregeek",
+    "version": "1.0.0",
+    "description": "The PureGeek Website",
     "main": "index.js",
     "scripts": {
-        "build": "npm run clean && npm run mkdirs && cp -r src/* build/",
-        "clean": "rm -fr build/",
-        "mkdirs": "mkdir build && mkdir build/css && mkdir build/js && mkdir build/img"
+        "build": "npm run less && ./build.sh",
+        "less": "lessc src/css/puregeek.less src/css/puregeek.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rushkeldon/puregeek.git"
     },
     "author": "",
     "license": "ISC",
-    "dependencies": {}
+    "bugs": {
+        "url": "https://github.com/rushkeldon/puregeek/issues"
+    },
+    "homepage": "https://github.com/rushkeldon/puregeek#readme",
+    "devDependencies": {
+        "less": "^4.2.0"
+    }
 }
