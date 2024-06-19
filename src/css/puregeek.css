@@ -11,7 +11,7 @@ html {
   top: 0px;
   bottom: 0px;
   width: 100vw;
-  height: calc(100vh + 30px);
+  height: 100vh;
   box-sizing: border-box;
   padding: 0px;
   color: #000000;
@@ -20,10 +20,13 @@ html {
   transform: translate3d(0, 0, 0);
   overflow-x: hidden;
   overflow-y: auto;
+  /* Target iOS devices */
 }
-body.scrolled,
-html.scrolled {
-  height: 100vh;
+@supports (-webkit-touch-callout: none) {
+  body,
+  html {
+    height: calc(100vh + 30px);
+  }
 }
 *,
 *:before,
@@ -61,6 +64,7 @@ main {
   overflow-x: hidden;
   overflow-y: auto;
   scrollbar-width: auto;
+  /* Target iOS devices */
 }
 main::-webkit-scrollbar {
   display: block;
@@ -76,6 +80,11 @@ main p {
 @media screen and (max-width:767px) {
   main p {
     line-height: 1.5;
+  }
+}
+@supports (-webkit-touch-callout: none) {
+  main {
+    bottom: 80px;
   }
 }
 nav {
@@ -208,6 +217,7 @@ a.inverse:hover {
   color: #f7f7f7;
   font-weight: 600;
   font-size: 18px;
+  /* Target iOS devices */
 }
 .footer .tagline {
   font-style: italic;
@@ -241,6 +251,11 @@ a.inverse:hover {
   .footer {
     height: 100px;
     line-height: 33.3px;
+  }
+}
+@supports (-webkit-touch-callout: none) {
+  .footer {
+    bottom: 30px;
   }
 }
 .cta-button {

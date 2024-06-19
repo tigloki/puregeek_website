@@ -17,6 +17,7 @@
 @heightFooterMobile: 100px;
 @heightNav: 64px;
 @heightHeaderAndNav : @heightHeader + @heightNav;
+@heightGutter: 30px;
 
 /*region elements */
 body, html {
@@ -27,7 +28,7 @@ body, html {
   top : 0px;
   bottom : 0px;
   width : 100vw;
-  height : calc( 100vh + 30px);
+  height : 100vh;
   box-sizing: border-box;
   padding: 0px;
   color: @clrBlack;
@@ -36,8 +37,9 @@ body, html {
   transform: translate3d(0, 0, 0);
   overflow-x: hidden;
   overflow-y: auto;
-  &.scrolled {
-    height: 100vh;
+  /* Target iOS devices */
+  @supports (-webkit-touch-callout: none) {
+    height : calc( 100vh + @heightGutter);
   }
 }
 
@@ -85,6 +87,10 @@ main {
     @media @querySmall {
       line-height: 1.5;
     }
+  }
+  /* Target iOS devices */
+  @supports (-webkit-touch-callout: none) {
+    bottom: @heightFooter + @heightGutter;
   }
 }
 
@@ -241,6 +247,10 @@ a {
   @media @querySmall {
     height: @heightFooterMobile;
     line-height: @heightFooterMobile * 0.333;
+  }
+  /* Target iOS devices */
+  @supports (-webkit-touch-callout: none) {
+    bottom : @heightGutter;
   }
 }
 

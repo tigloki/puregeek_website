@@ -13,14 +13,5 @@ const whenDOMready = ( func ) => {
 };
 
 whenDOMready( () => {
-  setTimeout( () => {
-    console.log( 'first timeout' );
-    window.scrollTo( 0, 30 );
-    setTimeout( () => {
-      console.log( 'second timeout - boomsie' );
-      window.scrollTo(0, 1);
-      window.document.body.classList.add( 'scrolled' );
-      document.documentElement.classList.add( 'scrolled' );
-    }, 1 );
-  }, 250 );
+  console.log( 'puregeek DOM ready' );
 });
