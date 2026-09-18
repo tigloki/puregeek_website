@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home — PureGeek (local design build)</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="puregeek.css">
+</head>
+<body>
+<div style="width: 390px; min-height: 1940px; background: var(--bg); display: flex; flex-direction: column;">
+
+  <header class="site-header">
+    <img src="images/08f5244a8512bde8be1bf52f380fe93c.svg" alt="PureGeek" style="height: 30px;">
+    <button class="icon-btn" aria-label="Menu" onclick="pgToggleMenu()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#002244" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+  </header>
+
+  <nav id="pg-mobile-nav" style="display:none;background:#fff;border-bottom:1px solid var(--border);padding:8px 24px 16px;flex-direction:column;">
+      <a href="Home-Mobile.html" style="padding:12px 0;font-weight:600;font-size:16px;">Home</a>
+      <a href="Projects-Mobile.html" style="padding:12px 0;font-weight:600;font-size:16px;">Projects</a>
+      <a href="#contact" style="padding:12px 0;font-weight:600;font-size:16px;">Contact</a>
+    </nav>
+
+  <section style="padding:48px 24px 36px;display:flex;flex-direction:column;gap:16px;">
+    <div style="font-size:13px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#69BE28;">Medford-area computer help</div>
+    <h1 style="margin:0;"><img src="images/1eb9ab784d5c52a4b9a5ee034814fc80.svg" alt="PureGeek — Your Computer Consultant" style="width:320px;max-width:100%;height:auto;display:block;"></h1>
+    <p style="font-size:17px;color:var(--ink-soft);">One-on-one help with the machines, accounts, and software you actually use — explained in plain language, not tech-speak.</p>
+    <div style="display:flex;flex-direction:column;gap:12px;margin-top:8px;">
+      <a href="#contact" class="btn btn-primary">Book a Consultation</a>
+      <a href="#services" class="btn btn-secondary">See What We Do</a>
+    </div>
+  </section>
+
+  <section id="services" style="padding:8px 24px 40px;display:flex;flex-direction:column;gap:16px;">
+    <h2 style="font-size:22px;">What We Help With</h2>
+    <div class="card">
+      <h3 style="font-size:17px;">Troubleshooting &amp; Repair</h3>
+      <p style="font-size:15px;color:var(--ink-soft);">Something broken, slow, or acting strange? We find out why and fix it — or tell you honestly when it's not worth fixing.</p>
+    </div>
+    <div class="card">
+      <h3 style="font-size:17px;">Setup &amp; Onboarding</h3>
+      <p style="font-size:15px;color:var(--ink-soft);">New computer, new phone, moving your stuff over — set up right the first time.</p>
+    </div>
+    <div class="card">
+      <h3 style="font-size:17px;">One-on-One Training</h3>
+      <p style="font-size:15px;color:var(--ink-soft);">Real skills, at your pace, with no judgment about what you don't already know.</p>
+    </div>
+    <div class="card">
+      <h3 style="font-size:17px;">Ongoing Support</h3>
+      <p style="font-size:15px;color:var(--ink-soft);">Check-ins and a real person to call when something comes up later.</p>
+    </div>
+  </section>
+
+  <section style="padding:32px 24px 40px;display:flex;flex-direction:column;gap:14px;background:#fff;border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+    <h2 style="font-size:22px;">About PureGeek</h2>
+    <p style="font-size:15px;color:var(--ink-soft);">PureGeek is a one-person practice built on a simple idea: technology should work for you, not the other way around. No jargon, no upsells, no judgment — just clear help from someone who explains what's happening and why.</p>
+  </section>
+
+  <section style="padding:40px 24px;display:flex;flex-direction:column;gap:14px;">
+    <h2 style="font-size:22px;">Beyond Repair</h2>
+    <p style="font-size:15px;color:var(--ink-soft);">PureGeek is also the hub for a small roster of side projects — Linux training, AI literacy classes, hardware recycling, and more.</p>
+    <a href="Projects-Mobile.html" class="btn btn-primary" style="align-self:flex-start;margin-top:6px;">View All Projects</a>
+  </section>
+
+  <footer class="site-footer" id="contact">
+    <img src="images/d92fa52fa798d9151dd6f3694c1b3299.svg" alt="PureGeek" style="height:26px;margin-bottom:20px;">
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;">
+      <a href="Home-Mobile.html">Home</a>
+      <a href="Projects-Mobile.html">Projects</a>
+      <a href="mailto:martin@puregeek.net">martin@puregeek.net</a>
+      <a href="tel:+15419515654">541-951-5654</a>
+    </div>
+    <div style="margin-top:24px;font-size:13px;color:#8FA0AE;">© 2026 PureGeek. Medford, OR.</div>
+  </footer>
+
+</div>
+<script src="pg-common.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects — PureGeek (local design build)</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="puregeek.css">
+</head>
+<body>
+<div style="width: 390px; min-height: 2260px; background: var(--bg); display: flex; flex-direction: column;">
+
+  <header class="site-header">
+    <a href="Home-Mobile.html"><img src="images/08f5244a8512bde8be1bf52f380fe93c.svg" alt="PureGeek" style="height: 30px;"></a>
+    <button class="icon-btn" aria-label="Menu" onclick="pgToggleMenu()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#002244" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+  </header>
+
+  <nav id="pg-mobile-nav" style="display:none;background:#fff;border-bottom:1px solid var(--border);padding:8px 24px 16px;flex-direction:column;">
+      <a href="Home-Mobile.html" style="padding:12px 0;font-weight:600;font-size:16px;">Home</a>
+      <a href="Projects-Mobile.html" style="padding:12px 0;font-weight:600;font-size:16px;">Projects</a>
+      <a href="#contact" style="padding:12px 0;font-weight:600;font-size:16px;">Contact</a>
+    </nav>
+
+  <section style="padding:44px 24px 32px;display:flex;flex-direction:column;gap:14px;">
+    <h1 style="font-size:32px;">Projects &amp; Side Ventures</h1>
+    <p style="font-size:16px;color:var(--ink-soft);">PureGeek is the hub for a handful of other things worth doing — some live, some still taking shape. Here's the full roster.</p>
+  </section>
+
+  <section style="padding:0 24px 48px;display:flex;flex-direction:column;gap:18px;">
+
+    <a href="LUTF-Mobile.html" class="card card-link" style="text-decoration:none;">
+      <span class="badge badge-progress">Design Phase</span>
+      <h3 style="font-size:19px;"><span style="font-size:0.8em;">Linux</span> <em>User</em> <span style="font-size:0.8em;">Training and</span> <em>Facilitation</em></h3>
+      <p style="font-size:14px;font-style:italic;color:var(--ink-soft);">"Because you don't want a certification; you just want to check your email! Maybe watch a baby goat video. Watch some news. You know ... just <strong><em>use</em></strong> your computer."</p>
+      <p style="font-size:15px;color:var(--ink-soft);">An ongoing, managed service that teaches people to actually live in Linux day-to-day — and stays close enough afterward to catch what breaks, without ever making you the administrator of your own machine.</p>
+      <span style="font-weight:600;font-size:14px;color:var(--navy);">Learn more →</span>
+    </a>
+
+    <a href="SecondWind-Mobile.html" class="card card-link" style="text-decoration:none;">
+      <span class="badge badge-progress">Design Phase</span>
+      <h3 style="font-size:19px;">SecondWind</h3>
+      <p style="font-size:14px;font-style:italic;color:var(--ink-soft);">"Teach them enough of the language to get directions to the pool."</p>
+      <p style="font-size:15px;color:var(--ink-soft);">A guided installer that walks non-technical users through a clean Linux Mint install on hardware that still has life in it — turning an aging Windows machine into something worth keeping.</p>
+      <span style="font-weight:600;font-size:14px;color:var(--navy);">Learn more →</span>
+    </a>
+
+    <a href="AILiteracyCourse-Mobile.html" class="card card-link" style="text-decoration:none;">
+      <span class="badge badge-progress">Active Planning</span>
+      <h3 style="font-size:19px;">AI Literacy Course</h3>
+      <p style="font-size:14px;font-style:italic;color:var(--ink-soft);">"AI is like a playground merry-go-round that is already spinning. Everyone on it is having fun!"</p>
+      <p style="font-size:15px;color:var(--ink-soft);">Consumer AI education for adults who are hesitant, fearful, or just tired of being talked down to — starting with a low-cost group class and growing into one-on-one sessions.</p>
+      <span style="font-weight:600;font-size:14px;color:var(--navy);">Learn more →</span>
+    </a>
+
+    <a href="HowIAI-Mobile.html" class="card card-link" style="text-decoration:none;">
+      <span class="badge badge-live">Live Example</span>
+      <h3 style="font-size:19px;">How I AI</h3>
+      <p style="font-size:15px;color:var(--ink-soft);">A discussion of the techniques and conventions behind how I work with AI collaborators — not a list of what I use it for, and not "how you should AI." My own style, take what's useful.</p>
+      <span style="font-weight:600;font-size:14px;color:var(--navy);">Learn more →</span>
+    </a>
+
+    <a href="HardwareRecycling-Mobile.html" class="card card-link" style="text-decoration:none;">
+      <span class="badge badge-concept">Concept</span>
+      <h3 style="font-size:19px;">Selective Hardware Recycling</h3>
+      <p style="font-size:15px;color:var(--ink-soft);">A straightforward way to keep working hardware out of the landfill — haul-away for machines you're done with, refurbished units for people who need one, and a bring-your-own-machine tier for anyone willing to do a little of the work themselves.</p>
+      <span style="font-weight:600;font-size:14px;color:var(--navy);">Learn more →</span>
+    </a>
+
+    <a href="SchrodingersMillionaire-Mobile.html" class="card card-link" style="text-decoration:none;">
+      <span class="badge badge-concept">Discussion Phase</span>
+      <h3 style="font-size:19px;">Schrödinger's Millionaire</h3>
+      <p style="font-size:14px;font-style:italic;color:var(--ink-soft);">"What would you actually do with it?"</p>
+      <p style="font-size:15px;color:var(--ink-soft);">An interactive windfall calculator — enter any prize amount and watch it get broken down across real allocation buckets, yearly down to daily. Started as a portfolio piece, kept alive because it's genuinely fun.</p>
+      <span style="font-weight:600;font-size:14px;color:var(--navy);">Learn more →</span>
+    </a>
+
+  </section>
+
+  <footer class="site-footer" id="contact">
+    <img src="images/d92fa52fa798d9151dd6f3694c1b3299.svg" alt="PureGeek" style="height:26px;margin-bottom:20px;">
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;">
+      <a href="Home-Mobile.html">Home</a>
+      <a href="Projects-Mobile.html">Projects</a>
+      <a href="mailto:martin@puregeek.net">martin@puregeek.net</a>
+      <a href="tel:+15419515654">541-951-5654</a>
+    </div>
+    <div style="margin-top:24px;font-size:13px;color:#8FA0AE;">© 2026 PureGeek. Medford, OR.</div>
+  </footer>
+
+</div>
+<script src="pg-common.js"></script>
+</body>
+</html>

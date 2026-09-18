@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Schrödinger's Millionaire — PureGeek (local design build)</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="puregeek.css">
+</head>
+<body>
+<div style="width: 1440px; min-height: 1500px; background: var(--bg); display: flex; flex-direction: column;">
+
+  <header class="site-header" style="padding:0 64px;">
+    <a href="Home-Desktop.html"><img src="images/08f5244a8512bde8be1bf52f380fe93c.svg" alt="PureGeek" style="height: 34px;"></a>
+    <nav style="display:flex;align-items:center;gap:40px;">
+      <a href="Home-Desktop.html" style="font-weight:600;font-size:15px;">Home</a>
+      <a href="Projects-Desktop.html" style="font-weight:600;font-size:15px;">Projects</a>
+      <a href="#contact" style="font-weight:600;font-size:15px;">Contact</a>
+      <a href="#contact" class="btn btn-primary" style="padding:10px 22px;font-size:15px;">Book a Consultation</a>
+    </nav>
+  </header>
+
+  <section style="padding:64px 64px 0;display:flex;justify-content:center;">
+    <div style="max-width:720px;width:100%;display:flex;flex-direction:column;gap:18px;">
+      <a href="Projects-Desktop.html" style="font-size:14px;font-weight:600;color:var(--ink-soft);">← All Projects</a>
+      <span class="badge badge-concept">Discussion Phase</span>
+      <h1 style="font-size:40px;">Schrödinger's Millionaire</h1>
+      <p style="font-size:18px;font-style:italic;color:var(--ink-soft);">"What would you actually do with it?"</p>
+    </div>
+  </section>
+
+  <section style="padding:32px 64px 0;display:flex;justify-content:center;">
+    <div style="max-width:720px;width:100%;display:flex;flex-direction:column;gap:22px;">
+      <p style="font-size:17px;color:var(--ink-soft);">An interactive lottery/windfall calculator. Enter any prize amount and see it broken down across real allocation buckets — Hearth &amp; Home, Build a Job, Invest, Friends &amp; Family, Fritter Fund, Charitable — at yearly, monthly, weekly, and daily rates. A PureGeek Project pursued because it's genuinely fun.</p>
+    </div>
+  </section>
+
+  <section style="padding:44px 64px 96px;display:flex;justify-content:center;">
+    <div class="card" style="max-width:560px;width:100%;">
+      <div class="pg-form-block">
+        <h3 style="font-size:20px;">Tell us how to reach you:</h3>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label class="field-label" for="name-input">Name</label>
+          <input id="name-input" class="contact-input pg-name" type="text" placeholder="Your name">
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label class="field-label" for="contact-input">Method</label>
+          <input id="contact-input" class="contact-input pg-contact" type="text" placeholder="Phone and/or email">
+        </div>
+        <div class="choice-list">
+          <label class="choice-check">
+            <input type="checkbox" class="pg-opt">
+            <span>Tell me more!</span>
+          </label>
+          <label class="choice-check">
+            <input type="checkbox" class="pg-opt">
+            <span>I am interested in beta testing this.</span>
+          </label>
+          <label class="choice-check">
+            <input type="checkbox" class="pg-opt">
+            <span>I am interested in being an early user of this when it's ready to roll out.</span>
+          </label>
+          <label class="choice-check">
+            <input type="checkbox" class="pg-opt">
+            <span>Let me know when you will be accepting customers.</span>
+          </label>
+        </div>
+        <button type="button" class="btn btn-primary pg-send-btn" style="margin-top:8px;align-self:flex-start;" onclick="pgSubmit(this)" disabled>Send</button>
+        <p class="pg-error-block" style="display:none;color:#B3261E;font-size:14px;margin-top:4px;"></p>
+      </div>
+      <div class="pg-thanks-block" style="display:none;">
+        <p style="font-size:16px;color:var(--navy);font-weight:600;">Thanks, <span class="pg-thanks-name"></span> — we'll be in touch at <span class="pg-thanks-contact"></span>.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer" id="contact" style="padding:56px 64px;display:flex;justify-content:space-between;align-items:flex-start;">
+    <div>
+      <img src="images/d92fa52fa798d9151dd6f3694c1b3299.svg" alt="PureGeek" style="height:28px;margin-bottom:14px;">
+      <div style="font-size:13px;color:#8FA0AE;">© 2026 PureGeek. Medford, OR.</div>
+    </div>
+    <div style="display:flex;gap:56px;font-size:14px;">
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="color:#8FA0AE;font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:0.05em;">Site</div>
+        <a href="Home-Desktop.html">Home</a>
+        <a href="Projects-Desktop.html">Projects</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="color:#8FA0AE;font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:0.05em;">Contact</div>
+        <a href="mailto:martin@puregeek.net">martin@puregeek.net</a>
+        <a href="tel:+15419515654">541-951-5654</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+<script src="pg-common.js"></script>
+</body>
+</html>
