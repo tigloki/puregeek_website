@@ -15,8 +15,8 @@
     <nav style="display:flex;align-items:center;gap:40px;">
       <a href="Home-Desktop.html" style="font-weight:600;font-size:15px;">Home</a>
       <a href="Projects-Desktop.html" style="font-weight:600;font-size:15px;">Projects</a>
-      <a href="#contact" style="font-weight:600;font-size:15px;">Contact</a>
-      <a href="#contact" class="btn btn-primary" style="padding:10px 22px;font-size:15px;">Book a Consultation</a>
+      <a href="javascript:void(0)" onclick="pgOpenContactModal()" style="font-weight:600;font-size:15px;">Contact</a>
+      <button type="button" class="btn btn-primary" style="padding:10px 22px;font-size:15px;" onclick="pgOpenContactModal()">Contact Us</button>
     </nav>
   </header>
 
@@ -93,6 +93,46 @@
     </div>
   </footer>
 
+</div>
+
+<div id="pg-contact-modal" class="pg-modal-overlay" onclick="pgModalOverlayClick(event)">
+  <div class="pg-modal-card card">
+    <button type="button" class="pg-modal-close" onclick="pgCloseContactModal()" aria-label="Close">&times;</button>
+    <div class="pg-form-block">
+        <h3 style="font-size:20px;">Tell us how to reach you:</h3>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label class="field-label" for="modal-name-input">Name</label>
+          <input id="modal-name-input" class="contact-input pg-name" type="text" placeholder="Your name">
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label class="field-label" for="modal-contact-input">Method</label>
+          <input id="modal-contact-input" class="contact-input pg-contact" type="text" placeholder="Phone and/or email">
+        </div>
+        <div class="choice-list">
+          <label class="choice-check">
+            <input type="checkbox" class="pg-opt">
+            <span>Tell me more!</span>
+          </label>
+          <label class="choice-check">
+            <input type="checkbox" class="pg-opt">
+            <span>I am interested in beta testing this.</span>
+          </label>
+          <label class="choice-check">
+            <input type="checkbox" class="pg-opt">
+            <span>I am interested in being an early user of this when it's ready to roll out.</span>
+          </label>
+          <label class="choice-check">
+            <input type="checkbox" class="pg-opt">
+            <span>Let me know when you will be accepting customers.</span>
+          </label>
+        </div>
+        <button type="button" class="btn btn-primary pg-send-btn" style="margin-top:8px;align-self:flex-start;" onclick="pgSubmit(this)" disabled>Send</button>
+        <p class="pg-error-block" style="display:none;color:#B3261E;font-size:14px;margin-top:4px;"></p>
+      </div>
+      <div class="pg-thanks-block" style="display:none;">
+        <p style="font-size:16px;color:var(--navy);font-weight:600;">Thanks, <span class="pg-thanks-name"></span> — we'll be in touch at <span class="pg-thanks-contact"></span>.</p>
+      </div>
+  </div>
 </div>
 <script src="pg-common.js"></script>
 </body>

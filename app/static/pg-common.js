@@ -4,6 +4,24 @@ function pgToggleMenu() {
   nav.style.display = (nav.style.display === 'none' || !nav.style.display) ? 'flex' : 'none';
 }
 
+function pgOpenContactModal() {
+  var modal = document.getElementById('pg-contact-modal');
+  if (modal) modal.style.display = 'flex';
+}
+
+function pgCloseContactModal() {
+  var modal = document.getElementById('pg-contact-modal');
+  if (modal) modal.style.display = 'none';
+}
+
+function pgModalOverlayClick(e) {
+  if (e.target && e.target.id === 'pg-contact-modal') pgCloseContactModal();
+}
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') pgCloseContactModal();
+});
+
 function pgUpdateSendState(card) {
   var name = card.querySelector('.pg-name');
   var contact = card.querySelector('.pg-contact');
