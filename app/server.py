@@ -17,6 +17,12 @@ from pathlib import Path
 
 from flask import Flask, jsonify, request, send_from_directory
 
+try:
+    from dotenv import load_dotenv
+    load_dotenv(Path(__file__).parent / ".env")
+except ImportError:
+    pass  # fine locally when env vars are exported some other way; required on the live server
+
 ROOT = Path(__file__).parent
 STATIC_DIR = ROOT / "static"
 DB_PATH = ROOT / "submissions.db"
@@ -142,8 +148,9 @@ def static_files(path):
     return send_from_directory(STATIC_DIR, path)
 
 
+init_db()  # runs both under `python3 server.py` and under Passenger's import-only startup
+
 if __name__ == "__main__":
-    init_db()
     port = int(os.environ.get("PORT", "1212"))
     print(f"PureGeek OLNC build running at http://0.0.0.0:{port}")
     app.run(host="0.0.0.0", port=port, debug=False)
