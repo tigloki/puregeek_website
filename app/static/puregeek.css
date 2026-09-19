@@ -47,6 +47,8 @@ a:hover { color: var(--accent); }
 }
 
 .site-header { display: flex; align-items: center; justify-content: flex-end; padding: 0 24px; height: 72px; background: #fff; border-bottom: 1px solid var(--border); }
+.site-header.has-back { justify-content: space-between; }
+.header-back { font-size: 14px; font-weight: 600; color: var(--ink-soft); }
 .site-footer { background: var(--navy); color: #C9D4DE; padding: 48px 24px; }
 .site-footer a { color: #fff; }
 .site-footer a:hover { color: var(--accent); }
@@ -148,7 +150,7 @@ a:hover { color: var(--accent); }
 /* Project detail hero + body */
 .detail-hero { padding: 36px 24px 8px; display: flex; flex-direction: column; align-items: center; gap: 16px; }
 .detail-logo { width: 220px; max-width: 100%; height: auto; display: block; }
-.detail-subtitle { font-size: 13px; font-weight: 600; color: var(--ink-soft); text-align: center; margin-top: -8px; }
+.detail-subtitle { font-size: 13px; font-weight: 600; color: var(--ink-soft); margin-top: -8px; }
 .detail-hero h1 { font-size: 28px; }
 .detail-tagline { font-size: 16px; font-style: italic; color: var(--ink-soft); }
 .detail-body { padding: 24px 24px 8px; display: flex; flex-direction: column; align-items: center; gap: 20px; }
