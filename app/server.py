@@ -146,25 +146,6 @@ def list_submissions():
     return jsonify([dict(r) for r in rows])
 
 
-STAGING_ROBOTS = "User-agent: *\nDisallow: /\n"
-PROD_ROBOTS = (
-    "User-agent: *\n"
-    "Allow: /\n\n"
-    "User-agent: Google-Extended\n"
-    "Allow: /\n"
-)
-
-
-@app.route("/robots.txt")
-def robots_txt():
-    # olnc.puregeek.net is a staging mirror of the live site — keep it out of
-    # search and AI-training crawls entirely so it never competes with or
-    # duplicates puregeek.net. The live domain stays fully open, with an
-    # explicit Google-Extended allow so Gemini isn't left to assume otherwise.
-    body = STAGING_ROBOTS if "olnc" in request.host else PROD_ROBOTS
-    return app.response_class(body, mimetype="text/plain")
-
-
 @app.route("/", defaults={"path": "index.html"})
 @app.route("/<path:path>")
 def static_files(path):
