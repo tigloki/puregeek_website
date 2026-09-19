@@ -46,6 +46,10 @@ def init_db():
         )
         """
     )
+    try:
+        con.execute("ALTER TABLE submissions ADD COLUMN message TEXT")
+    except sqlite3.OperationalError:
+        pass  # column already exists — older submissions keep their interests value, new ones use message
     con.commit()
     con.close()
 
@@ -69,14 +73,15 @@ def send_notification(row: dict):
         f"New PureGeek site lead\n\n"
         f"Name: {row['name']}\n"
         f"Contact: {row['contact_method']}\n"
-        f"Interests: {row['interests']}\n"
+        f"Message: {row['message']}\n"
         f"Source page: {row['source_page']}\n"
         f"When: {row['created_at']}\n"
         f"User agent: {row['user_agent']}\n"
         f"IP: {row['ip']}\n"
     )
+    project = (row["source_page"] or "").split(" — ")[0] or "PureGeek"
     msg = MIMEText(body)
-    msg["Subject"] = f"PureGeek lead: {row['name']}"
+    msg["Subject"] = f"PureGeek lead: {project} — {row['name']}"
     msg["From"] = mail_from
     msg["To"] = mail_to
 
@@ -96,22 +101,21 @@ def submit():
     data = request.get_json(silent=True) or {}
     name = (data.get("name") or "").strip()
     contact = (data.get("contact") or "").strip()
-    interests = data.get("interests") or []
+    message = (data.get("message") or "").strip()[:160]
     source_page = (data.get("source_page") or "").strip()
 
-    if not name or not contact or not interests:
-        return jsonify({"ok": False, "error": "name, contact, and at least one interest are required"}), 400
+    if not name or not contact or not message:
+        return jsonify({"ok": False, "error": "name, contact, and a message are required"}), 400
 
     created_at = datetime.now(timezone.utc).isoformat()
-    interests_str = ", ".join(interests)
     user_agent = request.headers.get("User-Agent", "")
     ip = request.headers.get("X-Forwarded-For", request.remote_addr or "")
 
     con = sqlite3.connect(DB_PATH)
     cur = con.execute(
-        "INSERT INTO submissions (created_at, source_page, name, contact_method, interests, user_agent, ip) "
+        "INSERT INTO submissions (created_at, source_page, name, contact_method, message, user_agent, ip) "
         "VALUES (?, ?, ?, ?, ?, ?, ?)",
-        (created_at, source_page, name, contact, interests_str, user_agent, ip),
+        (created_at, source_page, name, contact, message, user_agent, ip),
     )
     con.commit()
     row_id = cur.lastrowid
@@ -123,7 +127,7 @@ def submit():
         "source_page": source_page,
         "name": name,
         "contact_method": contact,
-        "interests": interests_str,
+        "message": message,
         "user_agent": user_agent,
         "ip": ip,
     }

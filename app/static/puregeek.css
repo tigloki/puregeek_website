@@ -54,13 +54,11 @@ a:hover { color: var(--accent); }
 .site-footer a:hover { color: var(--accent); }
 .icon-btn { background: none; border: none; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; cursor: pointer; }
 
-.choice-list { display: flex; flex-direction: column; gap: 10px; }
-.choice-check { display: flex; align-items: flex-start; gap: 10px; padding: 12px 14px; border-radius: 10px; border: 1.5px solid var(--border); background: #fff; font-size: 15px; color: var(--ink); cursor: pointer; }
-.choice-check input[type="checkbox"] { width: 18px; height: 18px; margin-top: 2px; flex-shrink: 0; accent-color: var(--navy); cursor: pointer; }
-.choice-check:has(input:checked) { border-color: var(--navy); background: #EDF1F6; font-weight: 600; }
 .field-label { font-size: 13px; font-weight: 700; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.04em; }
 .contact-input { width: 100%; padding: 12px 14px; border-radius: 8px; border: 1.5px solid var(--border); font: inherit; font-size: 15px; color: var(--ink); background: #fff; }
 .contact-input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+textarea.contact-input { resize: vertical; min-height: 72px; }
+.pg-char-count { align-self: flex-end; font-size: 12px; color: var(--ink-soft); }
 .btn:disabled { opacity: 0.5; cursor: not-allowed; }
 .btn:disabled::after { display: none; }
 

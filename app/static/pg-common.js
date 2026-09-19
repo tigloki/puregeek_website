@@ -25,10 +25,12 @@ document.addEventListener('keydown', function (e) {
 function pgUpdateSendState(card) {
   var name = card.querySelector('.pg-name');
   var contact = card.querySelector('.pg-contact');
-  var anyChecked = Array.prototype.some.call(card.querySelectorAll('.pg-opt'), function (c) { return c.checked; });
+  var message = card.querySelector('.pg-message');
+  var counter = card.querySelector('.pg-char-count');
+  if (counter && message) counter.textContent = message.value.length + '/' + message.maxLength;
   var btn = card.querySelector('.pg-send-btn');
   if (!btn) return;
-  var canSend = anyChecked && name.value.trim().length > 0 && contact.value.trim().length > 0;
+  var canSend = name.value.trim().length > 0 && contact.value.trim().length > 0 && message.value.trim().length > 0;
   btn.disabled = !canSend;
 }
 
@@ -39,8 +41,7 @@ function pgSubmit(btn) {
   var errorBlock = card.querySelector('.pg-error-block');
   var name = card.querySelector('.pg-name').value;
   var contact = card.querySelector('.pg-contact').value;
-  var interests = Array.prototype.filter.call(card.querySelectorAll('.pg-opt'), function (c) { return c.checked; })
-    .map(function (c) { return c.nextElementSibling.textContent; });
+  var message = card.querySelector('.pg-message').value.trim();
 
   btn.disabled = true;
   btn.textContent = 'Sending...';
@@ -51,7 +52,7 @@ function pgSubmit(btn) {
     body: JSON.stringify({
       name: name,
       contact: contact,
-      interests: interests,
+      message: message,
       source_page: document.title,
     }),
   })
