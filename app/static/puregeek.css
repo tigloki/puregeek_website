@@ -104,14 +104,14 @@ a:hover { color: var(--accent); }
 .service-card p { font-size: 15px; color: var(--ink-soft); }
 
 /* About / Beyond Repair / Attribution (Home) */
-.about-section { padding: 32px 24px 40px; background: #fff; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); display: flex; flex-direction: column; gap: 14px; }
+.about-section { padding: 32px 24px 40px; background: #fff; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); display: flex; flex-direction: column; align-items: center; gap: 14px; }
 .about-section h2 { font-size: 22px; text-align: center; }
 .about-section p { font-size: 15px; color: var(--ink-soft); }
 .about-quote { font-size: 19px; font-weight: 700; color: var(--navy); text-align: center; }
 .beyond-section { padding: 40px 24px; display: flex; flex-direction: column; gap: 14px; }
 .beyond-section h2 { font-size: 22px; }
 .beyond-section p { font-size: 15px; color: var(--ink-soft); }
-.attribution-section { padding: 32px 24px 40px; background: #fff; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 12px; }
+.attribution-section { padding: 32px 24px 40px; background: #fff; border-top: 1px solid var(--border); display: flex; flex-direction: column; align-items: center; gap: 12px; }
 .attribution-section h2 { font-size: 20px; }
 .attribution-section p { font-size: 14px; color: var(--ink-soft); }
 
@@ -129,11 +129,11 @@ a:hover { color: var(--accent); }
 .roster-grid .card .learn-more { font-weight: 600; font-size: 14px; color: var(--navy); }
 
 /* Project detail hero + body */
-.detail-hero { padding: 36px 24px 8px; display: flex; flex-direction: column; gap: 16px; }
+.detail-hero { padding: 36px 24px 8px; display: flex; flex-direction: column; align-items: center; gap: 16px; }
 .detail-hero .back-link { font-size: 14px; font-weight: 600; color: var(--ink-soft); }
 .detail-hero h1 { font-size: 28px; }
 .detail-tagline { font-size: 16px; font-style: italic; color: var(--ink-soft); }
-.detail-body { padding: 24px 24px 8px; display: flex; flex-direction: column; gap: 20px; }
+.detail-body { padding: 24px 24px 8px; display: flex; flex-direction: column; align-items: center; gap: 20px; }
 .detail-body p { font-size: 16px; color: var(--ink-soft); }
 .detail-cta { font-size: 18px; font-weight: 700; color: var(--navy); }
 
