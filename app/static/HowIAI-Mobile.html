@@ -12,9 +12,12 @@
 
   <header class="site-header">
     <a href="Home-Mobile.html"><img src="images/08f5244a8512bde8be1bf52f380fe93c.svg" alt="PureGeek" style="height: 30px;"></a>
-    <button class="icon-btn" aria-label="Menu" onclick="pgToggleMenu()">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#002244" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-    </button>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <button type="button" class="btn btn-primary" style="padding:8px 14px;font-size:13px;" onclick="pgOpenContactModal()">Contact Us</button>
+      <button class="icon-btn" aria-label="Menu" onclick="pgToggleMenu()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#002244" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
   </header>
 
   <nav id="pg-mobile-nav" style="display:none;background:#fff;border-bottom:1px solid var(--border);padding:8px 24px 16px;flex-direction:column;">
