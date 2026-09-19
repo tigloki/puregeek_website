@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Home — PureGeek</title>
+<title>Projects — PureGeek</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="puregeek.css">
 </head>
 <body>
 <header class="site-header">
-    <img src="images/08f5244a8512bde8be1bf52f380fe93c.svg" alt="PureGeek" class="logo-img">
+    <a href="index.html"><img src="images/08f5244a8512bde8be1bf52f380fe93c.svg" alt="PureGeek" class="logo-img"></a>
     <nav class="nav-desktop">
       <a href="index.html" style="font-weight:600;font-size:15px;">Home</a>
       <a href="Projects.html" style="font-weight:600;font-size:15px;">Projects</a>
@@ -29,59 +29,54 @@
     <a href="Projects.html">Projects</a>
     <a href="javascript:void(0)" onclick="pgOpenContactModal()">Contact</a>
   </nav>
-<section class="hero">
-    <div class="hero-eyebrow">Medford-area computer help</div>
-    <h1 style="margin:0;"><img src="images/1eb9ab784d5c52a4b9a5ee034814fc80.svg" alt="PureGeek — Your Computer Consultant" class="hero-logo"></h1>
-    <p class="hero-sub">One-on-one help with the machines, accounts, and software you actually use — explained in plain language, not tech-speak.</p>
-    <div class="hero-ctas">
-      <button type="button" class="btn btn-primary" onclick="pgOpenContactModal()">Contact Us</button>
-      <a href="#services" class="btn btn-secondary">See What We Do</a>
-    </div>
+<section class="roster-intro">
+    <h1>Projects &amp; Side Ventures</h1>
+    <p>PureGeek is the hub for a handful of other things worth doing — some live, some still taking shape. Here's the full roster.</p>
   </section>
 
-  <section id="services" class="services-section">
-    <h2>What We Help With</h2>
-    <div class="services-grid">
-      <div class="card service-card">
-        <h3>Troubleshooting &amp; Repair</h3>
-        <p>Something broken, slow, or acting strange? We find out why and fix it — or tell you honestly when it's not worth fixing.</p>
-      </div>
-      <div class="card service-card">
-        <h3>Setup &amp; Onboarding</h3>
-        <p>New computer, new phone, moving your stuff over — set up right the first time.</p>
-      </div>
-      <div class="card service-card">
-        <h3>One-on-One Training</h3>
-        <p>Real skills, at your pace, with no judgment about what you don't already know.</p>
-      </div>
-      <div class="card service-card">
-        <h3>Ongoing Support</h3>
-        <p>Check-ins and a real person to call when something comes up later.</p>
-      </div>
-    </div>
-  </section>
+  <section class="roster-grid-section">
+    <div class="roster-grid">
+    <a href="LUTF.html" class="card card-link" style="text-decoration:none;">
+      <span class="badge badge-live">Accepting Users</span>
+      <h3><span style="font-size:0.8em;">Linux</span> <em>User</em> <span style="font-size:0.8em;">Training and</span> <em>Facilitation</em></h3>
+      <p>"Because you don't want a certification; you just want to check your email! Maybe watch a baby goat video. Watch some news. You know ... just <strong><em>use</em></strong> your computer."</p>
+      <span class="learn-more">Learn more &rarr;</span>
+    </a>
 
-  <section class="about-section">
-    <div class="container">
-      <h2>About PureGeek</h2>
-      <p>PureGeek is a one-person practice built on a simple idea: nobody needs to talk down to you or bury you in technical jargon. Even complex technical concepts can be explained to non-technical users in an understandable and respectful way. The fact that my hobby, and often my vocation, for the last several decades has been centered around computers and the internet does not mean I am part of some secret society that you don't have the secret handshake for.</p>
-      <p>Woodworking, gardening, swimming pool chemistry, baking, car mechanics, economics, foreign policy, astrophysics, and why my dog <em>never farts unless he's sleeping right at my feet</em> are all things I wish I knew more about. But I spent my time learning all this stuff instead.</p>
-      <p>I have said it to many customers who warn me that they aren't technical people:</p>
-      <p class="about-quote">"Don't worry, I'm geek enough for both of us!"</p>
-    </div>
-  </section>
+    <a href="SecondWind.html" class="card card-link" style="text-decoration:none;">
+      <span class="badge badge-progress">Design Phase</span>
+      <h3>SecondWind</h3>
+      <p>"A project to provide the same lowering and/or removal of hurdles from the path to Linux adoption for people who don't need or want training or facilitation."</p>
+      <span class="learn-more">Learn more &rarr;</span>
+    </a>
 
-  <section class="beyond-section">
-    <h2>Beyond Repair</h2>
-    <p>PureGeek is also the hub for a small roster of side projects — Linux training, AI literacy classes, hardware recycling, and more.</p>
-    <a href="Projects.html" class="btn btn-primary">View All Projects</a>
-  </section>
+    <a href="AILiteracyCourse.html" class="card card-link" style="text-decoration:none;">
+      <span class="badge badge-progress">Active Planning</span>
+      <h3>AI Literacy Course</h3>
+      <p>"AI is like a playground merry-go-round that is already spinning. Everyone on it is having fun! But at this point, how do I get on?"</p>
+      <span class="learn-more">Learn more &rarr;</span>
+    </a>
 
-  <section id="attribution" class="attribution-section">
-    <div class="container">
-      <h2>Attribution</h2>
-      <p>This site was built through days of live, iterative collaboration between Marty and Claude Code — not a single prompt and publish. The brand, the voice, the product lineup, and very nearly every word of final copy are Marty's; the code, the real backend, and the deployment are Claude's, built and rebuilt under Marty's direction and review throughout.</p>
-      <p style="font-style:italic;"><strong>TL;DR:</strong> Conceptualized and directed by the author. Refined through iterative collaboration with AI — Claude Sonnet 5, via Claude Code. Finalized by the author.</p>
+    <a href="HowIAI.html" class="card card-link" style="text-decoration:none;">
+      <span class="badge badge-live">Live Example</span>
+      <h3>How I AI</h3>
+      <p>"Not necessarily how <strong><em>you</em></strong> should. Just how I do it and why I think it works."</p>
+      <span class="learn-more">Learn more &rarr;</span>
+    </a>
+
+    <a href="HardwareRecycling.html" class="card card-link" style="text-decoration:none;">
+      <span class="badge badge-live">Active</span>
+      <h3>Selective Hardware Recycling</h3>
+      <p>"Let's not fill the landfills with perfectly good hardware whose only sin was outliving its original purpose. Let's give it a new purpose and offer it to someone who still needs it."</p>
+      <span class="learn-more">Learn more &rarr;</span>
+    </a>
+
+    <a href="SchrodingersMillionaire.html" class="card card-link" style="text-decoration:none;">
+      <span class="badge badge-concept">Discussion Phase</span>
+      <h3>Schrödinger's Millionaire</h3>
+      <p>"What would you actually do with it?"</p>
+      <span class="learn-more">Learn more &rarr;</span>
+    </a>
     </div>
   </section>
 <footer class="site-footer" id="contact">
