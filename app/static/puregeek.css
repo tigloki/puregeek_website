@@ -78,7 +78,7 @@ a:hover { color: var(--accent); }
 .container { width: 100%; max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
 .about-section .container { gap: 14px; }
 .attribution-section .container { gap: 12px; }
-.detail-hero .container { gap: 16px; }
+.detail-hero .container { gap: 16px; text-align: center; }
 .detail-body .container { gap: 20px; }
 .wide-container { max-width: 1160px; margin: 0 auto; }
 
@@ -149,7 +149,7 @@ a:hover { color: var(--accent); }
 
 /* Project detail hero + body */
 .detail-hero { padding: 36px 24px 8px; display: flex; flex-direction: column; align-items: center; gap: 16px; }
-.detail-logo { width: 220px; max-width: 100%; height: auto; display: block; }
+.detail-logo { width: 220px; max-width: 100%; height: auto; display: block; margin: 0 auto; }
 .detail-subtitle { font-size: 13px; font-weight: 600; color: var(--ink-soft); margin-top: -8px; }
 .detail-hero h1 { font-size: 28px; }
 .detail-tagline { font-size: 16px; font-style: italic; color: var(--ink-soft); }
