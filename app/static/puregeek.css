@@ -138,7 +138,6 @@ a:hover { color: var(--accent); }
 
 /* Project roster intro + card grid */
 .roster-intro { padding: 44px 24px 32px; display: flex; flex-direction: column; gap: 14px; }
-.roster-logo { width: 420px; max-width: 100%; height: auto; display: block; }
 .roster-intro h1 { font-size: 32px; }
 .roster-intro p { font-size: 16px; color: var(--ink-soft); }
 .roster-grid-section { padding: 0 24px 48px; }
@@ -205,7 +204,6 @@ a:hover { color: var(--accent); }
   .attribution-section p { font-size: 15px; }
 
   .roster-intro { padding: 72px 64px 8px; max-width: 760px; }
-  .roster-logo { width: 680px; }
   .roster-intro h1 { font-size: 44px; }
   .roster-intro p { font-size: 18px; }
   .roster-grid-section { padding: 40px 64px 80px; }
