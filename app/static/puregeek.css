@@ -118,6 +118,18 @@ a:hover { color: var(--accent); }
 /* Notice box (reusable — e.g. group discounts) */
 .notice-box { background: var(--navy); color: var(--accent); font-weight: 700; padding: 16px 20px; border-radius: 10px; font-size: 15px; }
 
+/* Rate sheet (Pricing) */
+.rate-sheet { display: flex; flex-direction: column; gap: 0; }
+.rate-row { display: flex; flex-direction: column; gap: 4px; padding: 18px 0; border-bottom: 1px solid var(--border); }
+.rate-name { font-weight: 700; color: var(--navy); font-size: 16px; }
+.rate-sub { font-size: 14px; color: var(--ink-soft); }
+.rate-value { font-size: 15px; color: var(--ink); font-weight: 600; }
+.rate-value.tbd { color: var(--ink-soft); font-weight: 400; font-style: italic; }
+
+@media (min-width: 900px) {
+  .rate-row { flex-direction: row; align-items: baseline; justify-content: space-between; gap: 24px; padding: 22px 0; }
+}
+
 /* Project roster intro + card grid */
 .roster-intro { padding: 44px 24px 32px; display: flex; flex-direction: column; gap: 14px; }
 .roster-intro h1 { font-size: 32px; }
