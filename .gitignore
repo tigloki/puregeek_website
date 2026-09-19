@@ -33,3 +33,9 @@ build/*
 
 # Dependency directories
 node_modul
+
+# Backend runtime (app/)
+app/submissions.db
+app/.env
+app/__pycache__/
+

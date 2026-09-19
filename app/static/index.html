@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home — PureGeek</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="puregeek.css?v=1789790035">
+</head>
+<body>
+<header class="site-header">
+    <img src="images/08f5244a8512bde8be1bf52f380fe93c.svg" alt="PureGeek" class="logo-img">
+    <nav class="nav-desktop">
+      <a href="index.html" style="font-weight:600;font-size:15px;">Home</a>
+      <a href="Projects.html" style="font-weight:600;font-size:15px;">Projects</a>
+      <a href="javascript:void(0)" onclick="pgOpenContactModal()" style="font-weight:600;font-size:15px;">Contact</a>
+      <button type="button" class="btn btn-primary header-contact-btn" onclick="pgOpenContactModal()">Contact Us</button>
+    </nav>
+    <div class="header-actions nav-mobile-toggle">
+      <button type="button" class="btn btn-primary header-contact-btn" onclick="pgOpenContactModal()">Contact Us</button>
+      <button class="icon-btn" id="pg-menu-btn" aria-label="Menu" onclick="pgToggleMenu()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#002244" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="pg-mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="Projects.html">Projects</a>
+    <a href="javascript:void(0)" onclick="pgOpenContactModal()">Contact</a>
+  </nav>
+<section class="hero">
+    <div class="hero-eyebrow">Computer Help for Medford and the Greater Rogue Valley</div>
+    <h1 style="margin:0;"><img src="images/1eb9ab784d5c52a4b9a5ee034814fc80.svg" alt="PureGeek — Your Computer Consultant" class="hero-logo"></h1>
+    <p class="hero-sub">One-on-one help with the machines, accounts, and software you actually use — explained in plain language, not tech-speak.</p>
+    <div class="hero-ctas">
+      <button type="button" class="btn btn-primary" onclick="pgOpenContactModal()">Contact Us</button>
+      <a href="#services" class="btn btn-secondary">See What We Do</a>
+    </div>
+  </section>
+
+  <section id="services" class="services-section">
+    <h2>What We Help With</h2>
+    <div class="services-grid">
+      <div class="card service-card">
+        <h3>Troubleshooting &amp; Repair</h3>
+        <p>Something broken, slow, or acting strange? We find out why and fix it — or tell you honestly when it's not worth fixing.</p>
+      </div>
+      <div class="card service-card">
+        <h3>Setup &amp; Onboarding</h3>
+        <p>New computer, new phone, moving your stuff over — set up right the first time.</p>
+      </div>
+      <div class="card service-card">
+        <h3>One-on-One Training</h3>
+        <p>Real skills, at your pace, with no judgment about what you don't already know.</p>
+      </div>
+      <div class="card service-card">
+        <h3>Ongoing Support</h3>
+        <p>Check-ins and a real person to call when something comes up later.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <div class="container">
+      <h2>About PureGeek</h2>
+      <p>PureGeek is a one-person practice built on a simple idea: nobody needs to talk down to you or bury you in technical jargon. Even complex technical concepts can be explained to non-technical users in an understandable and respectful way. The fact that my hobby, and often my vocation, for the last several decades has been centered around computers and the internet does not mean I am part of some shadow society that you don't know the secret handshake for.</p>
+      <p>Woodworking, gardening, swimming pool chemistry, baking, car mechanics, economics, foreign policy, astrophysics, and why my dog <em>never farts unless he's sleeping right at my feet</em> are all things I wish I knew more about. But I spent my time learning all this geek stuff instead. What are you good at? That's really awesome! You know what I'm good at? Geek stuff.</p>
+      <p style="text-align:center;">I have said it to many customers who warn me that they aren't "technical people":</p>
+      <p class="about-quote">"Don't worry, I'm geek enough for the both of us!"</p>
+    </div>
+  </section>
+
+  <section class="beyond-section">
+    <h2>Beyond Repair</h2>
+    <p>PureGeek is also the hub for a small roster of side projects — Linux training, AI literacy classes, hardware recycling, and more.</p>
+    <a href="Projects.html" class="btn btn-primary">View All Projects</a>
+  </section>
+
+  <section id="attribution" class="attribution-section">
+    <div class="container">
+      <h2>Attribution</h2>
+      <p>This site was built through days of live, iterative collaboration between Marty and Claude Code — not a single prompt and publish. The brand, the voice, the product lineup, and very nearly every word of final copy are Marty's; the code, the real backend, and the deployment are Claude's, built and rebuilt under Marty's direction and review throughout.</p>
+      <p style="font-style:italic;"><strong>TL;DR:</strong> Conceptualized and directed by the author. Refined through iterative collaboration with AI — Claude Sonnet 5, via Claude Code. Finalized by the author.</p>
+    </div>
+  </section>
+<footer class="site-footer" id="contact">
+    <div>
+      <img src="images/d92fa52fa798d9151dd6f3694c1b3299.svg" alt="PureGeek" class="footer-logo">
+      <div class="footer-copyright footer-copyright-mobile">&copy; 2026 PureGeek. Medford, OR.</div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="Projects.html">Projects</a>
+      <a href="mailto:martin@puregeek.net">martin@puregeek.net</a>
+      <a href="tel:+15419515654">541-951-5654</a>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <div class="footer-col-label">Site</div>
+        <a href="index.html">Home</a>
+        <a href="Projects.html">Projects</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-label">Contact</div>
+        <a href="mailto:martin@puregeek.net">martin@puregeek.net</a>
+        <a href="tel:+15419515654">541-951-5654</a>
+      </div>
+    </div>
+  </footer>
+<div id="pg-contact-modal" class="pg-modal-overlay" onclick="pgModalOverlayClick(event)">
+    <div class="pg-modal-card card">
+      <button type="button" class="pg-modal-close" onclick="pgCloseContactModal()" aria-label="Close">&times;</button>
+      <div class="pg-form-block">
+        <h3>Tell us how to reach you:</h3>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label class="field-label" for="modal-name-input">Name</label>
+          <input id="modal-name-input" class="contact-input pg-name" type="text" placeholder="Your name">
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label class="field-label" for="modal-contact-input">Method</label>
+          <input id="modal-contact-input" class="contact-input pg-contact" type="text" placeholder="Phone and/or email">
+        </div>
+        <div class="choice-list">
+          <label class="choice-check">
+            <input type="checkbox" class="pg-opt">
+            <span>Tell me more!</span>
+          </label>
+          <label class="choice-check">
+            <input type="checkbox" class="pg-opt">
+            <span>I am interested in beta testing this.</span>
+          </label>
+          <label class="choice-check">
+            <input type="checkbox" class="pg-opt">
+            <span>I am interested in being an early user of this when it's ready to roll out.</span>
+          </label>
+          <label class="choice-check">
+            <input type="checkbox" class="pg-opt">
+            <span>Let me know when you will be accepting customers.</span>
+          </label>
+        </div>
+        <button type="button" class="btn btn-primary pg-send-btn" onclick="pgSubmit(this)" disabled>Send</button>
+        <p class="pg-error-block" style="display:none;color:#B3261E;font-size:14px;margin-top:4px;"></p>
+      </div>
+      <div class="pg-thanks-block" style="display:none;">
+        <p style="font-size:16px;color:var(--navy);font-weight:600;">Thanks, <span class="pg-thanks-name"></span> — we'll be in touch at <span class="pg-thanks-contact"></span>.</p>
+      </div>
+    </div>
+  </div>
+<script src="pg-common.js?v=1789790035"></script>
+</body>
+</html>

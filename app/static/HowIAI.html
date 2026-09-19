@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How I AI — PureGeek</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="puregeek.css?v=1789789385">
+</head>
+<body>
+<header class="site-header">
+    <a href="index.html"><img src="images/08f5244a8512bde8be1bf52f380fe93c.svg" alt="PureGeek" class="logo-img"></a>
+    <nav class="nav-desktop">
+      <a href="index.html" style="font-weight:600;font-size:15px;">Home</a>
+      <a href="Projects.html" style="font-weight:600;font-size:15px;">Projects</a>
+      <a href="javascript:void(0)" onclick="pgOpenContactModal()" style="font-weight:600;font-size:15px;">Contact</a>
+      <button type="button" class="btn btn-primary header-contact-btn" onclick="pgOpenContactModal()">Contact Us</button>
+    </nav>
+    <div class="header-actions nav-mobile-toggle">
+      <button type="button" class="btn btn-primary header-contact-btn" onclick="pgOpenContactModal()">Contact Us</button>
+      <button class="icon-btn" id="pg-menu-btn" aria-label="Menu" onclick="pgToggleMenu()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#002244" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="pg-mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="Projects.html">Projects</a>
+    <a href="javascript:void(0)" onclick="pgOpenContactModal()">Contact</a>
+  </nav>
+<section class="detail-hero">
+    <div class="container">
+      <a href="Projects.html" class="back-link">&larr; All Projects</a>
+      <span class="badge badge-live">Live Example</span>
+      <h1>How I AI</h1>
+      <p class="detail-tagline">"Not necessarily how <strong><em>you</em></strong> should. Just how I do it and why I think it works."</p>
+    </div>
+  </section>
+
+  <section class="detail-body">
+    <div class="container">
+    <p>This is not examples of what I use AI for. Although some of that will likely come up, because it helps demonstrate the results I achieve with How I AI. This is a discussion of some of the techniques and conventions I have used with various AI collaborators.</p>
+    <p>I feel that I have achieved some pretty cool things and dodged many of the pitfalls that have snared other AI users. I do, indeed, share some of the successes we have had, to demonstrate how well these strategies have worked for me.</p>
+    <p>Please note: the name of this project is not "How <strong><em>you</em></strong> Should AI." This is a narrative of my style. Take from it any part you like and leave any part you don't.</p>
+    <p>Whether or not you have taken the <a href="AILiteracyCourse.html">AI Literacy Course</a>, this is an interesting set of data that you can apply (or not) to your own use of Large Language Models.</p>
+    <p>One live example of the results of my Iterative, Collaborative approach is this website. I didn't say: "Go forth! And build me a website from scratch that is awesome and make all the text be in my voice. GO!" We worked on this for several days and this was the result of a long iterative collaboration with Claude Code CLI. (See the <a href="index.html#attribution">Attribution</a> section at the bottom of the home page.)</p>
+    <p>There are really three versions of that attribution: the really long one (the actual blow-by-blow, which stays between me and the AI), a shortened public version (worth reading, but still a choice), and a one-line summary. Honestly, you only need that last part. The long version is process. The paragraph is a choice you make. But that last line, I'd argue, is the bare minimum for anyone using AI and being honest about it.</p>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="card">
+      <div class="pg-form-block">
+        <h3>Tell us how to reach you:</h3>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label class="field-label" for="name-input">Name</label>
+          <input id="name-input" class="contact-input pg-name" type="text" placeholder="Your name">
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label class="field-label" for="contact-input">Method</label>
+          <input id="contact-input" class="contact-input pg-contact" type="text" placeholder="Phone and/or email">
+        </div>
+        <div class="choice-list">
+          <label class="choice-check">
+            <input type="checkbox" class="pg-opt">
+            <span>Tell me more!</span>
+          </label>
+          <label class="choice-check">
+            <input type="checkbox" class="pg-opt">
+            <span>I am interested in beta testing this.</span>
+          </label>
+          <label class="choice-check">
+            <input type="checkbox" class="pg-opt">
+            <span>I am interested in being an early user of this when it's ready to roll out.</span>
+          </label>
+          <label class="choice-check">
+            <input type="checkbox" class="pg-opt">
+            <span>Let me know when you will be accepting customers.</span>
+          </label>
+        </div>
+        <button type="button" class="btn btn-primary pg-send-btn" onclick="pgSubmit(this)" disabled>Send</button>
+        <p class="pg-error-block" style="display:none;color:#B3261E;font-size:14px;margin-top:4px;"></p>
+      </div>
+      <div class="pg-thanks-block" style="display:none;">
+        <p style="font-size:16px;color:var(--navy);font-weight:600;">Thanks, <span class="pg-thanks-name"></span> — we'll be in touch at <span class="pg-thanks-contact"></span>.</p>
+      </div>
+    </div>
+  </section>
+<footer class="site-footer" id="contact">
+    <div>
+      <img src="images/d92fa52fa798d9151dd6f3694c1b3299.svg" alt="PureGeek" class="footer-logo">
+      <div class="footer-copyright footer-copyright-mobile">&copy; 2026 PureGeek. Medford, OR.</div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="Projects.html">Projects</a>
+      <a href="mailto:martin@puregeek.net">martin@puregeek.net</a>
+      <a href="tel:+15419515654">541-951-5654</a>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <div class="footer-col-label">Site</div>
+        <a href="index.html">Home</a>
+        <a href="Projects.html">Projects</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-label">Contact</div>
+        <a href="mailto:martin@puregeek.net">martin@puregeek.net</a>
+        <a href="tel:+15419515654">541-951-5654</a>
+      </div>
+    </div>
+  </footer>
+<div id="pg-contact-modal" class="pg-modal-overlay" onclick="pgModalOverlayClick(event)">
+    <div class="pg-modal-card card">
+      <button type="button" class="pg-modal-close" onclick="pgCloseContactModal()" aria-label="Close">&times;</button>
+      <div class="pg-form-block">
+        <h3>Tell us how to reach you:</h3>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label class="field-label" for="modal-name-input">Name</label>
+          <input id="modal-name-input" class="contact-input pg-name" type="text" placeholder="Your name">
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label class="field-label" for="modal-contact-input">Method</label>
+          <input id="modal-contact-input" class="contact-input pg-contact" type="text" placeholder="Phone and/or email">
+        </div>
+        <div class="choice-list">
+          <label class="choice-check">
+            <input type="checkbox" class="pg-opt">
+            <span>Tell me more!</span>
+          </label>
+          <label class="choice-check">
+            <input type="checkbox" class="pg-opt">
+            <span>I am interested in beta testing this.</span>
+          </label>
+          <label class="choice-check">
+            <input type="checkbox" class="pg-opt">
+            <span>I am interested in being an early user of this when it's ready to roll out.</span>
+          </label>
+          <label class="choice-check">
+            <input type="checkbox" class="pg-opt">
+            <span>Let me know when you will be accepting customers.</span>
+          </label>
+        </div>
+        <button type="button" class="btn btn-primary pg-send-btn" onclick="pgSubmit(this)" disabled>Send</button>
+        <p class="pg-error-block" style="display:none;color:#B3261E;font-size:14px;margin-top:4px;"></p>
+      </div>
+      <div class="pg-thanks-block" style="display:none;">
+        <p style="font-size:16px;color:var(--navy);font-weight:600;">Thanks, <span class="pg-thanks-name"></span> — we'll be in touch at <span class="pg-thanks-contact"></span>.</p>
+      </div>
+    </div>
+  </div>
+<script src="pg-common.js?v=1789789385"></script>
+</body>
+</html>
