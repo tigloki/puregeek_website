@@ -46,7 +46,7 @@ a:hover { color: var(--accent); }
   .card-link:hover { border-color: var(--accent); box-shadow: 0 8px 24px rgba(20,33,61,0.08); }
 }
 
-.site-header { display: flex; align-items: center; justify-content: space-between; padding: 0 24px; height: 72px; background: #fff; border-bottom: 1px solid var(--border); }
+.site-header { display: flex; align-items: center; justify-content: flex-end; padding: 0 24px; height: 72px; background: #fff; border-bottom: 1px solid var(--border); }
 .site-footer { background: var(--navy); color: #C9D4DE; padding: 48px 24px; }
 .site-footer a { color: #fff; }
 .site-footer a:hover { color: var(--accent); }
@@ -136,6 +136,7 @@ a:hover { color: var(--accent); }
 
 /* Project roster intro + card grid */
 .roster-intro { padding: 44px 24px 32px; display: flex; flex-direction: column; gap: 14px; }
+.roster-logo { width: 420px; max-width: 100%; height: auto; display: block; }
 .roster-intro h1 { font-size: 32px; }
 .roster-intro p { font-size: 16px; color: var(--ink-soft); }
 .roster-grid-section { padding: 0 24px 48px; }
@@ -146,7 +147,8 @@ a:hover { color: var(--accent); }
 
 /* Project detail hero + body */
 .detail-hero { padding: 36px 24px 8px; display: flex; flex-direction: column; align-items: center; gap: 16px; }
-.detail-hero .back-link { font-size: 14px; font-weight: 600; color: var(--ink-soft); }
+.detail-logo { width: 220px; max-width: 100%; height: auto; display: block; }
+.detail-subtitle { font-size: 13px; font-weight: 600; color: var(--ink-soft); text-align: center; margin-top: -8px; }
 .detail-hero h1 { font-size: 28px; }
 .detail-tagline { font-size: 16px; font-style: italic; color: var(--ink-soft); }
 .detail-body { padding: 24px 24px 8px; display: flex; flex-direction: column; align-items: center; gap: 20px; }
@@ -201,6 +203,7 @@ a:hover { color: var(--accent); }
   .attribution-section p { font-size: 15px; }
 
   .roster-intro { padding: 72px 64px 8px; max-width: 760px; }
+  .roster-logo { width: 680px; }
   .roster-intro h1 { font-size: 44px; }
   .roster-intro p { font-size: 18px; }
   .roster-grid-section { padding: 40px 64px 80px; }
@@ -210,6 +213,7 @@ a:hover { color: var(--accent); }
 
   .detail-hero { padding: 64px 64px 0; align-items: center; }
   .detail-hero .container { max-width: 720px; width: 100%; display: flex; flex-direction: column; gap: 18px; }
+  .detail-logo { width: 340px; }
   .detail-hero h1 { font-size: 40px; }
   .detail-tagline { font-size: 18px; }
   .detail-body { padding: 32px 64px 0; align-items: center; }
