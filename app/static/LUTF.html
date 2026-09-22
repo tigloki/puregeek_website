@@ -4,6 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Linux User Training and Facilitation — PureGeek</title>
+<meta name="description" content="Linux User Training and Facilitation, for computers that can't run Windows 11 but can run Linux.">
+<link rel="canonical" href="https://www.puregeek.net/LUTF.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Linux User Training and Facilitation — PureGeek">
+<meta property="og:description" content="Linux User Training and Facilitation, for computers that can't run Windows 11 but can run Linux.">
+<meta property="og:url" content="https://www.puregeek.net/LUTF.html">
+<meta property="og:image" content="https://www.puregeek.net/images/puregeek-og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Linux User Training and Facilitation — PureGeek">
+<meta name="twitter:description" content="Linux User Training and Facilitation, for computers that can't run Windows 11 but can run Linux.">
+<meta name="twitter:image" content="https://www.puregeek.net/images/puregeek-og-image.png">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="puregeek.css?v=1789855994">
 </head>
@@ -14,11 +25,11 @@
       <a href="index.html" style="font-weight:600;font-size:15px;">Home</a>
       <a href="Projects.html" style="font-weight:600;font-size:15px;">Projects</a>
       <a href="Pricing.html" style="font-weight:600;font-size:15px;">Pricing</a>
-      <button type="button" class="btn btn-primary header-contact-btn" onclick="pgOpenContactModal()">Contact Us</button>
+      <button type="button" class="btn btn-primary header-contact-btn" onclick="pgOpenContactModal(this)">Contact Us</button>
     </nav>
     <div class="header-actions nav-mobile-toggle">
-      <button type="button" class="btn btn-primary header-contact-btn" onclick="pgOpenContactModal()">Contact Us</button>
-      <button class="icon-btn" id="pg-menu-btn" aria-label="Menu" onclick="pgToggleMenu()">
+      <button type="button" class="btn btn-primary header-contact-btn" onclick="pgOpenContactModal(this)">Contact Us</button>
+      <button class="icon-btn" id="pg-menu-btn" aria-label="Menu" aria-expanded="false" onclick="pgToggleMenu()">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#002244" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
       </button>
     </div>
@@ -54,6 +65,7 @@
 
   <section class="contact-section">
     <div class="card">
+      <h2>Get In Touch</h2>
       <div class="pg-form-block">
         <h3>Tell us how to reach you:</h3>
         <div style="display:flex;flex-direction:column;gap:6px;">
@@ -77,7 +89,7 @@
       </div>
     </div>
   </section>
-<footer class="site-footer" id="contact">
+<footer class="site-footer">
     <div>
       <img src="images/d92fa52fa798d9151dd6f3694c1b3299.svg" alt="PureGeek" class="footer-logo">
       <div class="footer-copyright footer-copyright-mobile">&copy; 2026 PureGeek. Medford, OR.</div>
@@ -103,11 +115,11 @@
       </div>
     </div>
   </footer>
-<div id="pg-contact-modal" class="pg-modal-overlay" onclick="pgModalOverlayClick(event)">
+<div id="pg-contact-modal" class="pg-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="pg-modal-title" onclick="pgModalOverlayClick(event)">
     <div class="pg-modal-card card">
       <button type="button" class="pg-modal-close" onclick="pgCloseContactModal()" aria-label="Close">&times;</button>
       <div class="pg-form-block">
-        <h3>Tell us how to reach you:</h3>
+        <h3 id="pg-modal-title">Tell us how to reach you:</h3>
         <div style="display:flex;flex-direction:column;gap:6px;">
           <label class="field-label" for="modal-name-input">Name</label>
           <input id="modal-name-input" class="contact-input pg-name" type="text" placeholder="Your name">

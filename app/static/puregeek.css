@@ -157,6 +157,7 @@ textarea.contact-input { resize: vertical; min-height: 72px; }
 /* Contact card section */
 .contact-section { padding: 28px 24px 48px; }
 .contact-section .card { width: 100%; }
+.contact-section h2 { font-size: 20px; margin-bottom: 4px; }
 .contact-section h3 { font-size: 19px; }
 .contact-section .btn { margin-top: 8px; width: 100%; }
 
@@ -221,6 +222,7 @@ textarea.contact-input { resize: vertical; min-height: 72px; }
 
   .contact-section { padding: 44px 64px 96px; display: flex; justify-content: center; }
   .contact-section .card { max-width: 560px; }
+  .contact-section h2 { font-size: 22px; }
   .contact-section h3 { font-size: 20px; }
   .contact-section .btn { width: auto; align-self: flex-start; }
 
