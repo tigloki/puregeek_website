@@ -146,10 +146,24 @@ def list_submissions():
     return jsonify([dict(r) for r in rows])
 
 
-@app.route("/", defaults={"path": "index.html"})
+@app.route("/")
+def index():
+    # Deliberately a separate route from static_files rather than
+    # @app.route("/", defaults={"path": "index.html"}) sharing its view function —
+    # that pattern makes Werkzeug treat "/" as the canonical URL for path=="index.html"
+    # and 308-redirect an explicit /index.html request there, surfacing SCRIPT_NAME
+    # (i.e. /app.cgi/) in the browser under CGI.
+    return send_from_directory(STATIC_DIR, "index.html")
+
+
 @app.route("/<path:path>")
 def static_files(path):
     return send_from_directory(STATIC_DIR, path)
+
+
+@app.errorhandler(404)
+def not_found(_e):
+    return send_from_directory(STATIC_DIR, "404.html"), 404
 
 
 init_db()  # runs both under `python3 server.py` and under Passenger's import-only startup
