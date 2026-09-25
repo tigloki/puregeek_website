@@ -61,6 +61,7 @@ def send_notification(row: dict):
     password = os.environ.get("SMTP_PASS")
     mail_to = os.environ.get("MAIL_TO", "puregeek@puregeek.net")
     mail_from = os.environ.get("MAIL_FROM", user or mail_to)
+    sms_to = os.environ.get("SMS_TO")  # optional: a carrier email-to-SMS gateway address
 
     if not (host and port and user and password):
         app.logger.warning(
@@ -90,6 +91,20 @@ def send_notification(row: dict):
             smtp.starttls()
             smtp.login(user, password)
             smtp.sendmail(mail_from, [mail_to], msg.as_string())
+
+            if sms_to:
+                # No Subject: most carrier gateways prepend it to the body, burning
+                # into the ~150-char budget before the real text even starts.
+                sms_body = f"PureGeek lead: {row['name']} ({row['contact_method']}) - {project}"[:150]
+                sms_msg = MIMEText(sms_body)
+                sms_msg["From"] = mail_from
+                sms_msg["To"] = sms_to
+                try:
+                    smtp.sendmail(mail_from, [sms_to], sms_msg.as_string())
+                except Exception as sms_exc:  # best-effort — email already went out above
+                    app.logger.error(
+                        "SMS notification failed for submission id=%s: %s", row.get("id"), sms_exc
+                    )
         return True
     except Exception as exc:  # best-effort — form submission must still succeed
         app.logger.error("Email notification failed for submission id=%s: %s", row.get("id"), exc)
